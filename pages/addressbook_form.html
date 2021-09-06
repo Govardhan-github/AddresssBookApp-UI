@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/addressbook_form.css">
+    <script src="../js/Contact.js"></script>
+    <script src="../js/addressbook_form.js"></script>
     </head>
     <!--UC1-->
     <body>
@@ -30,20 +32,21 @@
                 </div>
                 <!--UC3-->
                 <div class="row-content" style="margin-top: 20px;">
-                    <label for = "fullname" class="label text name-block" >Full Name:</label>
-                    <input type="text" class="input-name" id="fullname" name="fullname" pattern="^[A-Z][a-z A-Z ]{2,}$"  title="Invalid input" placeholder="Enter Your Name.." required>
-                    <error-output class="text-error" for="text"></error-output>
+                    <label for = "name" class="label text name-block" >Full Name:</label>
+                    <input type="name" class="input-name" id="name" name="name" pattern="^[A-Z][a-z A-Z ]{2,}$"  title="Invalid input" placeholder="Enter Your Name.." required>
+                    <error-output class="text-error" for="name"></error-output>
 
                 </div> 
                 <div class="row-content">
                     <label class="label text-address" for="address">Enter Address :</label><br>
-                    <textarea class="input-address" type="text-area" id="adress" name="address"  pattern="^[#.0-9a-zA-Z,-]+$"
+                    <textarea class="input-address" type="address" id="address" name="address"  pattern="^[#.0-9a-zA-Z,-]+$"
                     title="invalid Address formate " placeholder="Enter Your Address.." required></textarea>
+                    <error-output class="address-error" for="address"></error-output>
                 </div>
                 <!--CITY-->
                 <div class="row-content1">
                     <label class="label text-city" for="city">City :</label>
-                    <select id="city" name="City">
+                    <select id="city" name="city">
                         <option value="Select City">Select City</option>
                         <option value="Lucknow">Hyderabad</option>
                         <option value="Allahabaad">Allahabaad</option>
@@ -56,7 +59,7 @@
                         <option value="Goa">Huzurnagar</option>    
                     </select>
                     <label class="label text-state" for="state">State : </label>
-                    <select id="state" name="State">
+                    <select id="state" name="state">
                         <option value="select state">Select State</option>
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -96,11 +99,14 @@
                         <option value="West Bengal">West Bengal</option>    
                     </select>
                     <label class="label text-zip" for="zip">ZIP :</label>
-                    <input class="zip" name="Zip" id="ZIP" placeholder="Enter Your Zip..." required>
+                    <input class="zip" name="zip" id="zip" placeholder="Enter Your Zip..." required>
+                    <error-output class="zip-error" for="zip"></error-output>
+
                     </select>
                 </div>
                 <div>
-                    <input class="number" name="number" id="Number" pattern="^[6-9]{1}[0-9]{9}$" title="Phone number is invalid "placeholder="Phone Number" required>
+                    <input class="number" name="phoneNumber" for="phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
+                    <error-output class="phone-error" for="phoneNumber"></error-output>
                 </div>
                 <!--UC5-->
                 <div class="butttonParent" >

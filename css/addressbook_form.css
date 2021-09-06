@@ -218,7 +218,7 @@ UC3---
     opacity: 1; 
     margin-left:30px;
 }
-#ZIP{
+#zip{
     top:7px;
     left: 5px;
     width: 100px;
@@ -247,7 +247,7 @@ UC3---
     opacity: 1; 
     margin-left:30px;
 }
-#Number{
+#phoneNumber{
     top: 735px;
     left: 1112px;
     width: 720px;
@@ -286,3 +286,10 @@ UC3---
     border-radius: 100px;
     opacity: 1;
 }
+error-output {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+  }
