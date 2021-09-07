@@ -63,9 +63,7 @@ const createAddressBook = ()=>{
     let addressBookForm = new AddressBookForm();
     addressBookForm._id = new Date().getTime();
     try{
-      //  console.log("adding name");
         addressBookForm._name=document.querySelector('#name').value;
-      //  console.log("added name");
     }catch(e){
         setTextValue('.text-error', e)
         throw e;
@@ -77,7 +75,6 @@ const createAddressBook = ()=>{
     addressBookForm._state=document.querySelector('#state').value;
     addressBookForm._zip=document.querySelector('#zip').value;
     addressBookForm._phoneNumber=document.querySelector('#phone').value;
-    console.log("added phone");
     alert(addressBookForm.toString());
     return addressBookForm;
 }

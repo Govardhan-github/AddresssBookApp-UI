@@ -22,13 +22,12 @@
                 <span class="add-text add-book" style="float:left" >BOOK</span>
             </div>
         </header>
-    
         <!---------------------UC2--------------------------->
-    
         <div class="form-header">
             <div class="form-header-text" >
                 <center><p class="form-heading">Person Address form</p></center>
-                 <img class= "form-logo" src="../assets/Logo/cross.jpg" alt="" ></a>
+                <!--UC9-->
+                 <a href="address_book_home.html"><img class= "form-logo" src="../assets/Logo/cross.jpg" alt="" ></a>
             </div>
         <!--------------------UC3---------------------------->
             <center>
@@ -113,27 +112,23 @@
                             placeholder="Enter Your Zip code" required>
                             <error-output class="zip-error" for="zip"></error-output>
                         </div>
-                </div>    
-                            
+                </div>       
                 <div class="row-content">
-                    <label class="label text phone-field" for="phone">Phone number</label>   <!---UC4 Validation perform for phone number-->   
-                    <input class="input" type="numeric" id="phone" name="phone" pattern="^[6-9]\d{9}$" title="Phone number is invalid "
+                    <label class="label text phone-field" for="phone">Phone number</label>  
+                    <input class="input" type="numeric" id="phone" name="phone" 
                     placeholder="Enter Your phone number" required>
                     <error-output class="phone-error" for="phone"></error-output>
                 </div>
                 <!------------UC5 Onsubmit / Onreset event fired -------->
                 <div class="butttonParent" >
                     <div class="submit-reset" >
-                    <button type="submit" class="addbuttton submitButton abutton" id="submitButton" >Add</button> <!--By giving a type value submit then when we click submit it fired the onsubmit function-->
+                    <button type="submit" class="addbuttton submitButton abutton" id="submitButton" >Add</button> 
                     <button type="reset" class="resetButtton buttton rebutton" >Reset</button>
-                    <!--By giving a type value reset then when we click reset it fired the onreset function-->
                     </div>
                 </div>
             </div>
         </form>
-            </center>
+        </center>
         </div>  
     </body>
-     
-   
 </html>
