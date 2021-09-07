@@ -1,121 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Address Book Form</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/addressbook_form.css">
-    <script src="../js/Contact.js"></script>
-    <script src="../js/addressbook_form.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap ">
+        <link rel="stylesheet" href="../CSS/addressbook_form.css">
+        <script defer src="../js/addressbook_form.js"></script>
+        <script defer src="../js/Contact.js"></script>
+        <title>Address Book Form</title>
+        
     </head>
-    <!--UC1-->
     <body>
+        <!--------------------UC1---------------------->
         <header class="header-content header">
-            <div class="logo-content">
-                <img src="../assets/Logo/logo.1.jpg" alt="">
-                <div>
-                    <span class="add-text">ADDRESS</span><br>
-                    <span class="add-text add-book">BOOK</span>
-                </div>
+            <div class="logo content" >
+                <img class= "img-logo" style="float:left" src="../assets/Logo/logo.1.jpg" alt="">
+            </div>
+            <div >
+                <span class="add-text" style="float:left">ADDRESS</span><br>
+                <span class="add-text add-book" style="float:left" >BOOK</span>
             </div>
         </header>
-        <!--UC2-->
-        <div id="formId" class="form-header">
-            <form>
-                <div class="form-header-text">
-                    <div class="form-heading">PERSON ADDRESS FORM
-                        <img class="form-logo" src="../assets/Logo/cross.jpg" alt="">
-                    </div>   
+    
+        <!---------------------UC2--------------------------->
+    
+        <div class="form-header">
+            <div class="form-header-text" >
+                <center><p class="form-heading">Person Address form</p></center>
+                 <img class= "form-logo" src="../assets/Logo/cross.jpg" alt="" ></a>
+            </div>
+        <!--------------------UC3---------------------------->
+            <center>
+            <div class="row-content main-div">
+                <form action="#" onreset="resetForm()" onsubmit="save()  ; return false">
+                <label class="label text name-field" for="name"
+                >Full Name</label>
+                <br>       
+                <div style="margin-top: 0px;"> 
+                    <input class="input input-name" type="text" id="name"  name="name"
+                    placeholder="Your name.." required>
+                    <error-output class="text-error" for="text"></error-output>
                 </div>
-                <!--UC3-->
-                <div class="row-content" style="margin-top: 20px;">
-                    <label for = "name" class="label text name-block" >Full Name:</label>
-                    <input type="name" class="input-name" id="name" name="name" pattern="^[A-Z][a-z A-Z ]{2,}$"  title="Invalid input" placeholder="Enter Your Name.." required>
-                    <error-output class="text-error" for="name"></error-output>
-
-                </div> 
+                <br>
+                <div class="row-content butttonContent">
+                    <label class="label text address-field"  for="Notes">Address</label> <br>
+                    <input placeholder="Enter your address" id="address" name="address" type="text-area" class="input-address"></textarea>
+                </div>
+                <br>
+                <div style=" height:120px;display: flex;">
+                    <div>
+                        <label class="label text city-field" for="name">City</label><br>
+                        <select name="city" id="city" placeholder="Select city">
+                            <option value="Select City">Select City</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Kodad">Kodad</option>
+                            <option value="Vijayawada">Vijayawada</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Vizag">Vizag</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Patna">Patna</option>
+                            <option value="Goa">Goa</option>
+                        </select>
+                    </div>
+                    <div>
+                            <label class="label text state-field" for="name"
+                            >State</label>
+                            <select name="State" id="state" placeholder="Select state">
+                                <option value="Select State">Select State</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                            </select>
+                        </div>
+                        <div >
+                            <label class="label text zip-field" for="zip">Zip Code</label>            
+                            <input class="input" type="numeric" id="zip" name="zip"
+                            placeholder="Enter Your Zip code" required>
+                            <error-output class="zip-error" for="zip"></error-output>
+                        </div>
+                </div>    
+                            
                 <div class="row-content">
-                    <label class="label text-address" for="address">Enter Address :</label><br>
-                    <textarea class="input-address" type="address" id="address" name="address"  pattern="^[#.0-9a-zA-Z,-]+$"
-                    title="invalid Address formate " placeholder="Enter Your Address.." required></textarea>
-                    <error-output class="address-error" for="address"></error-output>
+                    <label class="label text phone-field" for="phone">Phone number</label>   <!---UC4 Validation perform for phone number-->   
+                    <input class="input" type="numeric" id="phone" name="phone" pattern="^[6-9]\d{9}$" title="Phone number is invalid "
+                    placeholder="Enter Your phone number" required>
+                    <error-output class="phone-error" for="phone"></error-output>
                 </div>
-                <!--CITY-->
-                <div class="row-content1">
-                    <label class="label text-city" for="city">City :</label>
-                    <select id="city" name="city">
-                        <option value="Select City">Select City</option>
-                        <option value="Lucknow">Hyderabad</option>
-                        <option value="Allahabaad">Allahabaad</option>
-                        <option value="Fatehpur">Vijayawada</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Gaziabaad">Kodad</option>
-                        <option value="Pune">Pune</option>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Patna">Vizag</option>
-                        <option value="Goa">Huzurnagar</option>    
-                    </select>
-                    <label class="label text-state" for="state">State : </label>
-                    <select id="state" name="state">
-                        <option value="select state">Select State</option>
-                        <option value="Andhra Pradesh">Andhra Pradesh</option>
-                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                        <option value="Assam">Assam</option>
-                        <option value="Bihar">Bihar</option>
-                        <option value="Chandigarh">Chandigarh</option>
-                        <option value="Chhattisgarh">Chhattisgarh</option>
-                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
-                        <option value="Daman and Diu">Daman and Diu</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Lakshadweep">Lakshadweep</option>
-                        <option value="Puducherry">Puducherry</option>
-                        <option value="Goa">Goa</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Haryana">Haryana</option>
-                        <option value="Himachal Pradesh">Himachal Pradesh</option>
-                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                        <option value="Jharkhand">Jharkhand</option>
-                        <option value="Karnataka">Karnataka</option>
-                        <option value="Kerala">Kerala</option>
-                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Manipur">Manipur</option>
-                        <option value="Meghalaya">Meghalaya</option>
-                        <option value="Mizoram">Mizoram</option>
-                        <option value="Nagaland">Nagaland</option>
-                        <option value="Odisha">Odisha</option>
-                        <option value="Punjab">Punjab</option>
-                        <option value="Rajasthan">Rajasthan</option>
-                        <option value="Sikkim">Sikkim</option>
-                        <option value="Tamil Nadu">Tamil Nadu</option>
-                        <option value="Telangana">Telangana</option>
-                        <option value="Tripura">Tripura</option>
-                        <option value="Uttar Pradesh">Uttar Pradesh</option>
-                        <option value="Uttarakhand">Uttarakhand</option>
-                        <option value="West Bengal">West Bengal</option>    
-                    </select>
-                    <label class="label text-zip" for="zip">ZIP :</label>
-                    <input class="zip" name="zip" id="zip" placeholder="Enter Your Zip..." required>
-                    <error-output class="zip-error" for="zip"></error-output>
-
-                    </select>
-                </div>
-                <div>
-                    <input class="number" name="phoneNumber" for="phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
-                    <error-output class="phone-error" for="phoneNumber"></error-output>
-                </div>
-                <!--UC5-->
+                <!------------UC5 Onsubmit / Onreset event fired -------->
                 <div class="butttonParent" >
                     <div class="submit-reset" >
-                        <button type="submit" class="addbuttton submitButton adbutton" id="submitButton" >Add</button>
-                        <button type="reset" class="resetButtton buttton rebutton" >Reset</button>
+                    <button type="submit" class="addbuttton submitButton abutton" id="submitButton" >Add</button> <!--By giving a type value submit then when we click submit it fired the onsubmit function-->
+                    <button type="reset" class="resetButtton buttton rebutton" >Reset</button>
+                    <!--By giving a type value reset then when we click reset it fired the onreset function-->
                     </div>
-                </div>    
-            </form> 
-        </div>       
+                </div>
+            </div>
+        </form>
+            </center>
+        </div>  
     </body>
+     
+   
 </html>

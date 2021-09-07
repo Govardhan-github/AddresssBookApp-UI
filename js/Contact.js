@@ -1,11 +1,5 @@
-class Contact{
-    get id() {
-        return this._id;
-    }
-    set id(id) {
-        this._id = id;
-    }
-
+class AddressBookForm{
+   
     get name() { return this._name; }
     set name(name) {
         let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
@@ -17,7 +11,7 @@ class Contact{
         return this._address;
     }
     set address(address) {
-        let addressRegex = RegExp('^([a-zA-z0-9]{3,}[; ;])*$'); 
+        let addressRegex = RegExp('^([A-Z]{1}[a-zA-z0-9]{2,}[; ;])*$'); 
         if(addressRegex.test(address))
         this._address = address;
         else throw 'Incorrect Address Fromat';
@@ -63,7 +57,7 @@ class Contact{
 
     //method 
     toString() {
-        return "id =" + this.id + ",name = " + this.name + ",address = " + this.address +
+        return  "name = " + this.name + ",address = " + this.address +
             " ,phoneNumber = " + this.phoneNumber + " ,city = " + this.city +
             " ,state = " + this.state +" ,zip = " + this.zip;
     }
